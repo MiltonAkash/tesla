@@ -1,0 +1,21 @@
+.hide{
+  display: none;
+}
+.show{
+  @extend %flex;
+}
+
+.mobile{
+  @extend .hide;
+}
+
+@media screen and (max-width: $mobile-width){
+  .m-hide{
+    display: none;
+  }
+
+  .desktop{
+    @extend .m-hide;
+  }
+
+}

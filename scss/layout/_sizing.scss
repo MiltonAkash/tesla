@@ -1,0 +1,27 @@
+@for $flexi from 0 through $flex-limit {
+  .flex-#{$flexi} {
+    flex: $flexi;
+  }
+  .m-flex-#{$flexi}{
+    @media screen and (max-width: $mobile-width){
+      flex: $flexi;
+    }
+  }
+
+
+}
+
+@for $span from 1 through $span-limit {
+  .span-#{$span} {
+    width: percentage($span/12)
+
+  }
+  .m-span-#{$span} {
+    @media screen and (max-width: $mobile-width) {
+      width: percentage($span/12)
+
+    }
+
+  }
+
+}

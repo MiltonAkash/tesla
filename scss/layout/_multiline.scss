@@ -1,0 +1,16 @@
+
+$multi: center, flex-start, flex-end, stretch, space-around, space-between;
+
+@each $attr in $multi{
+  . multi-#{$attr} {
+    align-content: $attr;
+  }
+  @media screen and (max-width: 768px){
+    . m-multi-#{$attr} {
+      align-content: $attr;
+    }
+  }
+
+
+
+}

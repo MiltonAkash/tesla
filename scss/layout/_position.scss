@@ -1,0 +1,11 @@
+
+@each $pose in $position {
+  .#{$pose} {
+    position: #{$pose}
+  }
+  .m-#{$pose} {
+    @media screen and (max-width: $mobile-width){
+      position : #{$pose}
+    }
+  }
+}

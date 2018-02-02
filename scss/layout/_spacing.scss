@@ -1,0 +1,20 @@
+//Multiply with 8 on output
+
+//8m-8m,8m-16m 8m- -16m
+//8p-3m
+
+
+@each $prop,$key in (margin,m),(padding,p){
+  @each $val in $spacingValues{
+
+    [class*='#{$val}#{$key}-']{
+      #{$prop}-top:#{$val}px;
+      #{$prop}-bottom:#{$val}px;
+    }
+    [class*='-#{$val}#{$key}']{
+      #{$prop}-left:#{$val}px;
+      #{$prop}-right:#{$val}px;
+    }
+
+  }
+}

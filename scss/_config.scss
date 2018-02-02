@@ -1,0 +1,25 @@
+//Device configs
+$mobile-width: 768px;
+
+//Layout
+
+
+
+
+//Debug
+$debug-width:2px;
+$debug-color:red;
+$debug-hover-color:green;
+$debug-pattern:dashed;
+
+//Layout
+$position: relative,absolute,fixed;
+$wrapper: (wrap,wrap),(no-wrap,nowrap),(wrap-reverse,wrap-reverse);
+$flex-limit: 5;
+$span-limit: 12;
+
+$spacingValues: 0,8,16,24,32;
+
+$modal-background:rgba(0,0,0,0.8);
+$anim-duration: 0.4s;
+

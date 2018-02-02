@@ -1,0 +1,40 @@
+$align : left,center,right,justify;
+
+@each $alignment in $align {
+  .text-#{$alignment} {
+    text-align: #{$alignment};
+  }
+  .m-text-#{$alignment} {
+    @media screen and (max-width: 768px) {
+
+      text-align: #{$alignment};
+    }
+  }
+}
+
+$transform : uppercase,lowercase,capitalize;
+
+
+@each $transformation in $transform{
+  .text-#{$transformation}{
+    text-transform: $transformation
+  }
+  @media screen and (max-width: 768px) {
+    .m-text-#{$transformation} {
+      text-transform: $transformation
+    }
+  }
+
+}
+
+
+//$serif: Georgia,Times New Roman
+//$sans-serif: Arial,Arial black,Comic Sans MS,Impact,Lucida Sans Unicode,Lucida Grande,Charcoal,Tahoma,Geneva,Verdana
+//$monospace: Courier New,Courier,Lucida Console
+//
+//$fontsets : ($serif,serif),($sans-serif,sans-serif),($monospace,monospace)
+//
+//@each $fontset,$fontsetname in $fontsets
+//@each $font in $fontset
+//.#{$font}
+//font-family: "#{$font}","#{$fontsetname}"

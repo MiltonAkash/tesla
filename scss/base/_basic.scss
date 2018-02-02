@@ -1,0 +1,23 @@
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.debug{
+  *{
+    border: $debug-width $debug-pattern $debug-color;
+  }
+  *:hover{
+    border: $debug-width $debug-pattern $debug-hover-color;
+  }
+}
+
+
+body {
+  margin: 0em
+}

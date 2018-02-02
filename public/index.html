@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tesla</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#tesla">Tesla</a>
+<ul>
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#components-of-tesla">Components of Tesla</a></li>
+<li><a href="#guide-to-tesla">Guide to Tesla</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="tesla">Tesla</h1>
+        <a href="demo.html" style="background:teal;color:white;padding:8px 16px;">Tesla Demo App</a>
+<p>Tesla is a light weight, responsive,predictive UI framework<br>
+that can be used to build web and mobile applications UI rapidly.</p>
+<h2 id="concepts">Concepts</h2>
+<pre><code>Tesla Follows a Matter concepts to build UI.  
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>To include Stylesheet alone</p>
+<pre class=" language-html"><code class="prism  language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/path/to/dist/css/tesla.min.css<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre>
+<p>To include along with script</p>
+<pre class=" language-html"><code class="prism  language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/dist/js/tesla.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>To build after editing the source code</p>
+<pre class=" language-sh"><code class="prism  language-sh">npm run build
+</code></pre>
+<h2 id="components-of-tesla">Components of Tesla</h2>
+<ul>
+<li>static part (comprised of css &amp; sass)
+<ul>
+<li>Layouts
+<ul>
+<li>Based on Property(Solid &amp; Fluid)</li>
+<li>Based on Orientation (Row &amp; Columns)</li>
+<li>Based on Distribution (space-between,center,space-aroound,start,end)</li>
+<li>Based on Distribution of lines ()</li>
+<li>Based on wrapping Properties (Wrap,Nowrap,Wrapreverse)</li>
+<li>Sizing
+<ul>
+<li>Flex sizing</li>
+<li>Span sizing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Colors
+<ul>
+<li>Material Colors</li>
+<li>Html colors</li>
+</ul>
+</li>
+<li>Components
+<ul>
+<li>Loader</li>
+<li>Modal</li>
+<li>Tabs</li>
+<li>Can be extended to Buttons,forms,etc…</li>
+</ul>
+</li>
+<li>Misc
+<ul>
+<li>Animation Stacks
+<ul>
+<li>Left,Right,Top,Bottom animation</li>
+<li>Zoom animation</li>
+<li>Fading animation</li>
+</ul>
+</li>
+<li>Font Stacks
+<ul>
+<li>Transform (uppercase,lowercase,Underline)</li>
+<li>Alignment (left,right,center,justify)</li>
+</ul>
+</li>
+<li>Visibility Stack(Hide,Show,desktop,mobile)</li>
+</ul>
+</li>
+<li>Responsiveness</li>
+</ul>
+</li>
+<li>Dynamic Part (comprised of js)
+<ul>
+<li>Ts-open</li>
+<li>Ts-close</li>
+<li>Ts-toggle</li>
+<li>And more …</li>
+</ul>
+</li>
+</ul>
+<h2 id="guide-to-tesla">Guide to Tesla</h2>
+<h3 id="adjustment-properties">Adjustment Properties</h3>
+<p>Basic containers consist of  <strong>Fluid</strong> and <strong>solid</strong>  components. Fluid acts as a real life fluid i.e it adjust itself to the width of the container. Solid is a rigid one.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fluid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>solid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>HI<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>solid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>HI<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>solid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>HI<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="orientation">Orientation</h3>
+<p>By default every element is oriented horizontally i.e row . Tesla provides Horizontal and vertical orientations namely <strong>row</strong> and <strong>column</strong>.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Middle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Right<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Top<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Middle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Bottom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<h3 id="to-be-continued...">To be continued…</h3>
+
+    </div>
+  </div>
+</body>
+
+</html>

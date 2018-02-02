@@ -1,0 +1,19 @@
+%flex{
+  display:flex;
+}
+
+//By Wrapper
+
+@each $props,$key in $wrapper{
+  .#{$props}{
+    flex-wrap:$key;
+  }
+  @media screen and (max-width: 768px) {
+    .m-#{$props}{
+      flex-wrap:$key;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,1834 @@
+/*
+  Classes:s
+  .debug .relative .absolute .fixed .liquid(match_parent) .solid(wrap_content) .row .col
+  .space-around .space-between .center .centerify
+
+
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.debug * {
+	border: 2px dashed red;
+}
+
+.debug *:hover {
+	border: 2px dashed green;
+}
+
+body {
+	margin: 0em;
+}
+
+.fluid,
+.modal,
+.solid,
+.show {
+	display: flex;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.no-wrap {
+	flex-wrap: nowrap;
+}
+
+.wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.relative,
+.modal-content {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed,
+.modal {
+	position: fixed;
+}
+
+.fluid,
+.modal,
+.solid,
+.show {
+	display: flex;
+}
+
+.fluid,
+.modal {
+	width: 100%;
+}
+
+.flex-0 {
+	flex: 0;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.flex-2 {
+	flex: 2;
+}
+
+.flex-3 {
+	flex: 3;
+}
+
+.flex-4 {
+	flex: 4;
+}
+
+.flex-5 {
+	flex: 5;
+}
+
+.span-1 {
+	width: 8.33333%;
+}
+
+.span-2 {
+	width: 16.66667%;
+}
+
+.span-3 {
+	width: 25%;
+}
+
+.span-4 {
+	width: 33.33333%;
+}
+
+.span-5 {
+	width: 41.66667%;
+}
+
+.span-6 {
+	width: 50%;
+}
+
+.span-7 {
+	width: 58.33333%;
+}
+
+.span-8 {
+	width: 66.66667%;
+}
+
+.span-9 {
+	width: 75%;
+}
+
+.span-10 {
+	width: 83.33333%;
+}
+
+.span-11 {
+	width: 91.66667%;
+}
+
+.span-12 {
+	width: 100%;
+}
+
+.row,
+.col {
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: nowrap;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.row.x-center {
+	justify-content: center;
+}
+
+.row.y-center {
+	align-items: center;
+}
+
+.row.x-end {
+	justify-content: flex-end;
+}
+
+.row.y-end {
+	align-items: flex-end;
+}
+
+.col {
+	flex-direction: column;
+}
+
+.col.x-center {
+	align-items: center;
+}
+
+.col.y-center {
+	justify-content: center;
+}
+
+.col.x-end {
+	align-items: flex-end;
+}
+
+.col.y-end {
+	justify-content: flex-end;
+}
+
+.centerify,
+.modal {
+	justify-content: center;
+	align-items: center;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.stretch {
+	align-items: stretch;
+}
+
+[class*='0m-'] {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+[class*='-0m'] {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+[class*='8m-'] {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+[class*='-8m'] {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+[class*='16m-'] {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+[class*='-16m'] {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+[class*='24m-'] {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+[class*='-24m'] {
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+[class*='32m-'] {
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+[class*='-32m'] {
+	margin-left: 32px;
+	margin-right: 32px;
+}
+
+[class*='0p-'] {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+[class*='-0p'] {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+[class*='8p-'] {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+[class*='-8p'] {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+[class*='16p-'] {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+[class*='-16p'] {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+[class*='24p-'] {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+[class*='-24p'] {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+[class*='32p-'] {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+[class*='-32p'] {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+.animate-top {
+	animation: top 0.4s;
+}
+
+.animate-right {
+	animation: right 0.4s;
+}
+
+.animate-left {
+	animation: left 0.4s;
+}
+
+.animate-bottom {
+	animation: bottom 0.4s;
+}
+
+.animate-opacity {
+	animation: opacity 0.4s;
+}
+
+.animate-zoom {
+	animation: zoom 0.4s;
+}
+
+.hide,
+.mobile {
+	display: none;
+}
+
+.modal {
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+	background-color: white;
+}
+
+.transparent {
+	background-color: transparent;
+}
+
+.AliceBlue {
+	color: AliceBlue;
+}
+
+.bg-AliceBlue {
+	background-color: AliceBlue;
+}
+
+.AntiqueWhite {
+	color: AntiqueWhite;
+}
+
+.bg-AntiqueWhite {
+	background-color: AntiqueWhite;
+}
+
+.Aqua {
+	color: Aqua;
+}
+
+.bg-Aqua {
+	background-color: Aqua;
+}
+
+.Aquamarine {
+	color: Aquamarine;
+}
+
+.bg-Aquamarine {
+	background-color: Aquamarine;
+}
+
+.Azure {
+	color: Azure;
+}
+
+.bg-Azure {
+	background-color: Azure;
+}
+
+.Beige {
+	color: Beige;
+}
+
+.bg-Beige {
+	background-color: Beige;
+}
+
+.Bisque {
+	color: Bisque;
+}
+
+.bg-Bisque {
+	background-color: Bisque;
+}
+
+.Black {
+	color: Black;
+}
+
+.bg-Black {
+	background-color: Black;
+}
+
+.BlanchedAlmond {
+	color: BlanchedAlmond;
+}
+
+.bg-BlanchedAlmond {
+	background-color: BlanchedAlmond;
+}
+
+.Blue {
+	color: Blue;
+}
+
+.bg-Blue {
+	background-color: Blue;
+}
+
+.BlueViolet {
+	color: BlueViolet;
+}
+
+.bg-BlueViolet {
+	background-color: BlueViolet;
+}
+
+.Brown {
+	color: Brown;
+}
+
+.bg-Brown {
+	background-color: Brown;
+}
+
+.BurlyWood {
+	color: BurlyWood;
+}
+
+.bg-BurlyWood {
+	background-color: BurlyWood;
+}
+
+.CadetBlue {
+	color: CadetBlue;
+}
+
+.bg-CadetBlue {
+	background-color: CadetBlue;
+}
+
+.Chartreuse {
+	color: Chartreuse;
+}
+
+.bg-Chartreuse {
+	background-color: Chartreuse;
+}
+
+.Chocolate {
+	color: Chocolate;
+}
+
+.bg-Chocolate {
+	background-color: Chocolate;
+}
+
+.Coral {
+	color: Coral;
+}
+
+.bg-Coral {
+	background-color: Coral;
+}
+
+.CornflowerBlue {
+	color: CornflowerBlue;
+}
+
+.bg-CornflowerBlue {
+	background-color: CornflowerBlue;
+}
+
+.Cornsilk {
+	color: Cornsilk;
+}
+
+.bg-Cornsilk {
+	background-color: Cornsilk;
+}
+
+.Crimson {
+	color: Crimson;
+}
+
+.bg-Crimson {
+	background-color: Crimson;
+}
+
+.Cyan {
+	color: Cyan;
+}
+
+.bg-Cyan {
+	background-color: Cyan;
+}
+
+.DarkBlue {
+	color: DarkBlue;
+}
+
+.bg-DarkBlue {
+	background-color: DarkBlue;
+}
+
+.DarkCyan {
+	color: DarkCyan;
+}
+
+.bg-DarkCyan {
+	background-color: DarkCyan;
+}
+
+.DarkGoldenRod {
+	color: DarkGoldenRod;
+}
+
+.bg-DarkGoldenRod {
+	background-color: DarkGoldenRod;
+}
+
+.DarkGray {
+	color: DarkGray;
+}
+
+.bg-DarkGray {
+	background-color: DarkGray;
+}
+
+.DarkGrey {
+	color: DarkGrey;
+}
+
+.bg-DarkGrey {
+	background-color: DarkGrey;
+}
+
+.DarkGreen {
+	color: DarkGreen;
+}
+
+.bg-DarkGreen {
+	background-color: DarkGreen;
+}
+
+.DarkKhaki {
+	color: DarkKhaki;
+}
+
+.bg-DarkKhaki {
+	background-color: DarkKhaki;
+}
+
+.DarkMagenta {
+	color: DarkMagenta;
+}
+
+.bg-DarkMagenta {
+	background-color: DarkMagenta;
+}
+
+.DarkOliveGreen {
+	color: DarkOliveGreen;
+}
+
+.bg-DarkOliveGreen {
+	background-color: DarkOliveGreen;
+}
+
+.Darkorange {
+	color: Darkorange;
+}
+
+.bg-Darkorange {
+	background-color: Darkorange;
+}
+
+.DarkOrchid {
+	color: DarkOrchid;
+}
+
+.bg-DarkOrchid {
+	background-color: DarkOrchid;
+}
+
+.DarkRed {
+	color: DarkRed;
+}
+
+.bg-DarkRed {
+	background-color: DarkRed;
+}
+
+.DarkSalmon {
+	color: DarkSalmon;
+}
+
+.bg-DarkSalmon {
+	background-color: DarkSalmon;
+}
+
+.DarkSeaGreen {
+	color: DarkSeaGreen;
+}
+
+.bg-DarkSeaGreen {
+	background-color: DarkSeaGreen;
+}
+
+.DarkSlateBlue {
+	color: DarkSlateBlue;
+}
+
+.bg-DarkSlateBlue {
+	background-color: DarkSlateBlue;
+}
+
+.DarkSlateGray {
+	color: DarkSlateGray;
+}
+
+.bg-DarkSlateGray {
+	background-color: DarkSlateGray;
+}
+
+.DarkSlateGrey {
+	color: DarkSlateGrey;
+}
+
+.bg-DarkSlateGrey {
+	background-color: DarkSlateGrey;
+}
+
+.DarkTurquoise {
+	color: DarkTurquoise;
+}
+
+.bg-DarkTurquoise {
+	background-color: DarkTurquoise;
+}
+
+.DarkViolet {
+	color: DarkViolet;
+}
+
+.bg-DarkViolet {
+	background-color: DarkViolet;
+}
+
+.DeepPink {
+	color: DeepPink;
+}
+
+.bg-DeepPink {
+	background-color: DeepPink;
+}
+
+.DeepSkyBlue {
+	color: DeepSkyBlue;
+}
+
+.bg-DeepSkyBlue {
+	background-color: DeepSkyBlue;
+}
+
+.DimGray {
+	color: DimGray;
+}
+
+.bg-DimGray {
+	background-color: DimGray;
+}
+
+.DimGrey {
+	color: DimGrey;
+}
+
+.bg-DimGrey {
+	background-color: DimGrey;
+}
+
+.DodgerBlue {
+	color: DodgerBlue;
+}
+
+.bg-DodgerBlue {
+	background-color: DodgerBlue;
+}
+
+.FireBrick {
+	color: FireBrick;
+}
+
+.bg-FireBrick {
+	background-color: FireBrick;
+}
+
+.FloralWhite {
+	color: FloralWhite;
+}
+
+.bg-FloralWhite {
+	background-color: FloralWhite;
+}
+
+.ForestGreen {
+	color: ForestGreen;
+}
+
+.bg-ForestGreen {
+	background-color: ForestGreen;
+}
+
+.Fuchsia {
+	color: Fuchsia;
+}
+
+.bg-Fuchsia {
+	background-color: Fuchsia;
+}
+
+.Gainsboro {
+	color: Gainsboro;
+}
+
+.bg-Gainsboro {
+	background-color: Gainsboro;
+}
+
+.GhostWhite {
+	color: GhostWhite;
+}
+
+.bg-GhostWhite {
+	background-color: GhostWhite;
+}
+
+.Gold {
+	color: Gold;
+}
+
+.bg-Gold {
+	background-color: Gold;
+}
+
+.GoldenRod {
+	color: GoldenRod;
+}
+
+.bg-GoldenRod {
+	background-color: GoldenRod;
+}
+
+.Gray {
+	color: Gray;
+}
+
+.bg-Gray {
+	background-color: Gray;
+}
+
+.Grey {
+	color: Grey;
+}
+
+.bg-Grey {
+	background-color: Grey;
+}
+
+.Green {
+	color: Green;
+}
+
+.bg-Green {
+	background-color: Green;
+}
+
+.GreenYellow {
+	color: GreenYellow;
+}
+
+.bg-GreenYellow {
+	background-color: GreenYellow;
+}
+
+.HoneyDew {
+	color: HoneyDew;
+}
+
+.bg-HoneyDew {
+	background-color: HoneyDew;
+}
+
+.HotPink {
+	color: HotPink;
+}
+
+.bg-HotPink {
+	background-color: HotPink;
+}
+
+.IndianRed {
+	color: IndianRed;
+}
+
+.bg-IndianRed {
+	background-color: IndianRed;
+}
+
+.Indigo {
+	color: Indigo;
+}
+
+.bg-Indigo {
+	background-color: Indigo;
+}
+
+.Ivory {
+	color: Ivory;
+}
+
+.bg-Ivory {
+	background-color: Ivory;
+}
+
+.Khaki {
+	color: Khaki;
+}
+
+.bg-Khaki {
+	background-color: Khaki;
+}
+
+.Lavender {
+	color: Lavender;
+}
+
+.bg-Lavender {
+	background-color: Lavender;
+}
+
+.LavenderBlush {
+	color: LavenderBlush;
+}
+
+.bg-LavenderBlush {
+	background-color: LavenderBlush;
+}
+
+.LawnGreen {
+	color: LawnGreen;
+}
+
+.bg-LawnGreen {
+	background-color: LawnGreen;
+}
+
+.LemonChiffon {
+	color: LemonChiffon;
+}
+
+.bg-LemonChiffon {
+	background-color: LemonChiffon;
+}
+
+.LightBlue {
+	color: LightBlue;
+}
+
+.bg-LightBlue {
+	background-color: LightBlue;
+}
+
+.LightCoral {
+	color: LightCoral;
+}
+
+.bg-LightCoral {
+	background-color: LightCoral;
+}
+
+.LightCyan {
+	color: LightCyan;
+}
+
+.bg-LightCyan {
+	background-color: LightCyan;
+}
+
+.LightGoldenRodYellow {
+	color: LightGoldenRodYellow;
+}
+
+.bg-LightGoldenRodYellow {
+	background-color: LightGoldenRodYellow;
+}
+
+.LightGray {
+	color: LightGray;
+}
+
+.bg-LightGray {
+	background-color: LightGray;
+}
+
+.LightGrey {
+	color: LightGrey;
+}
+
+.bg-LightGrey {
+	background-color: LightGrey;
+}
+
+.LightGreen {
+	color: LightGreen;
+}
+
+.bg-LightGreen {
+	background-color: LightGreen;
+}
+
+.LightPink {
+	color: LightPink;
+}
+
+.bg-LightPink {
+	background-color: LightPink;
+}
+
+.LightSalmon {
+	color: LightSalmon;
+}
+
+.bg-LightSalmon {
+	background-color: LightSalmon;
+}
+
+.LightSeaGreen {
+	color: LightSeaGreen;
+}
+
+.bg-LightSeaGreen {
+	background-color: LightSeaGreen;
+}
+
+.LightSkyBlue {
+	color: LightSkyBlue;
+}
+
+.bg-LightSkyBlue {
+	background-color: LightSkyBlue;
+}
+
+.LightSlateGray {
+	color: LightSlateGray;
+}
+
+.bg-LightSlateGray {
+	background-color: LightSlateGray;
+}
+
+.LightSlateGrey {
+	color: LightSlateGrey;
+}
+
+.bg-LightSlateGrey {
+	background-color: LightSlateGrey;
+}
+
+.LightSteelBlue {
+	color: LightSteelBlue;
+}
+
+.bg-LightSteelBlue {
+	background-color: LightSteelBlue;
+}
+
+.LightYellow {
+	color: LightYellow;
+}
+
+.bg-LightYellow {
+	background-color: LightYellow;
+}
+
+.Lime {
+	color: Lime;
+}
+
+.bg-Lime {
+	background-color: Lime;
+}
+
+.LimeGreen {
+	color: LimeGreen;
+}
+
+.bg-LimeGreen {
+	background-color: LimeGreen;
+}
+
+.Linen {
+	color: Linen;
+}
+
+.bg-Linen {
+	background-color: Linen;
+}
+
+.Magenta {
+	color: Magenta;
+}
+
+.bg-Magenta {
+	background-color: Magenta;
+}
+
+.Maroon {
+	color: Maroon;
+}
+
+.bg-Maroon {
+	background-color: Maroon;
+}
+
+.MediumAquaMarine {
+	color: MediumAquaMarine;
+}
+
+.bg-MediumAquaMarine {
+	background-color: MediumAquaMarine;
+}
+
+.MediumBlue {
+	color: MediumBlue;
+}
+
+.bg-MediumBlue {
+	background-color: MediumBlue;
+}
+
+.MediumOrchid {
+	color: MediumOrchid;
+}
+
+.bg-MediumOrchid {
+	background-color: MediumOrchid;
+}
+
+.MediumPurple {
+	color: MediumPurple;
+}
+
+.bg-MediumPurple {
+	background-color: MediumPurple;
+}
+
+.MediumSeaGreen {
+	color: MediumSeaGreen;
+}
+
+.bg-MediumSeaGreen {
+	background-color: MediumSeaGreen;
+}
+
+.MediumSlateBlue {
+	color: MediumSlateBlue;
+}
+
+.bg-MediumSlateBlue {
+	background-color: MediumSlateBlue;
+}
+
+.MediumSpringGreen {
+	color: MediumSpringGreen;
+}
+
+.bg-MediumSpringGreen {
+	background-color: MediumSpringGreen;
+}
+
+.MediumTurquoise {
+	color: MediumTurquoise;
+}
+
+.bg-MediumTurquoise {
+	background-color: MediumTurquoise;
+}
+
+.MediumVioletRed {
+	color: MediumVioletRed;
+}
+
+.bg-MediumVioletRed {
+	background-color: MediumVioletRed;
+}
+
+.MidnightBlue {
+	color: MidnightBlue;
+}
+
+.bg-MidnightBlue {
+	background-color: MidnightBlue;
+}
+
+.MintCream {
+	color: MintCream;
+}
+
+.bg-MintCream {
+	background-color: MintCream;
+}
+
+.MistyRose {
+	color: MistyRose;
+}
+
+.bg-MistyRose {
+	background-color: MistyRose;
+}
+
+.Moccasin {
+	color: Moccasin;
+}
+
+.bg-Moccasin {
+	background-color: Moccasin;
+}
+
+.NavajoWhite {
+	color: NavajoWhite;
+}
+
+.bg-NavajoWhite {
+	background-color: NavajoWhite;
+}
+
+.Navy {
+	color: Navy;
+}
+
+.bg-Navy {
+	background-color: Navy;
+}
+
+.OldLace {
+	color: OldLace;
+}
+
+.bg-OldLace {
+	background-color: OldLace;
+}
+
+.Olive {
+	color: Olive;
+}
+
+.bg-Olive {
+	background-color: Olive;
+}
+
+.OliveDrab {
+	color: OliveDrab;
+}
+
+.bg-OliveDrab {
+	background-color: OliveDrab;
+}
+
+.Orange {
+	color: Orange;
+}
+
+.bg-Orange {
+	background-color: Orange;
+}
+
+.OrangeRed {
+	color: OrangeRed;
+}
+
+.bg-OrangeRed {
+	background-color: OrangeRed;
+}
+
+.Orchid {
+	color: Orchid;
+}
+
+.bg-Orchid {
+	background-color: Orchid;
+}
+
+.PaleGoldenRod {
+	color: PaleGoldenRod;
+}
+
+.bg-PaleGoldenRod {
+	background-color: PaleGoldenRod;
+}
+
+.PaleGreen {
+	color: PaleGreen;
+}
+
+.bg-PaleGreen {
+	background-color: PaleGreen;
+}
+
+.PaleTurquoise {
+	color: PaleTurquoise;
+}
+
+.bg-PaleTurquoise {
+	background-color: PaleTurquoise;
+}
+
+.PaleVioletRed {
+	color: PaleVioletRed;
+}
+
+.bg-PaleVioletRed {
+	background-color: PaleVioletRed;
+}
+
+.PapayaWhip {
+	color: PapayaWhip;
+}
+
+.bg-PapayaWhip {
+	background-color: PapayaWhip;
+}
+
+.PeachPuff {
+	color: PeachPuff;
+}
+
+.bg-PeachPuff {
+	background-color: PeachPuff;
+}
+
+.Peru {
+	color: Peru;
+}
+
+.bg-Peru {
+	background-color: Peru;
+}
+
+.Pink {
+	color: Pink;
+}
+
+.bg-Pink {
+	background-color: Pink;
+}
+
+.Plum {
+	color: Plum;
+}
+
+.bg-Plum {
+	background-color: Plum;
+}
+
+.PowderBlue {
+	color: PowderBlue;
+}
+
+.bg-PowderBlue {
+	background-color: PowderBlue;
+}
+
+.Purple {
+	color: Purple;
+}
+
+.bg-Purple {
+	background-color: Purple;
+}
+
+.Red {
+	color: Red;
+}
+
+.bg-Red {
+	background-color: Red;
+}
+
+.RosyBrown {
+	color: RosyBrown;
+}
+
+.bg-RosyBrown {
+	background-color: RosyBrown;
+}
+
+.RoyalBlue {
+	color: RoyalBlue;
+}
+
+.bg-RoyalBlue {
+	background-color: RoyalBlue;
+}
+
+.SaddleBrown {
+	color: SaddleBrown;
+}
+
+.bg-SaddleBrown {
+	background-color: SaddleBrown;
+}
+
+.Salmon {
+	color: Salmon;
+}
+
+.bg-Salmon {
+	background-color: Salmon;
+}
+
+.SandyBrown {
+	color: SandyBrown;
+}
+
+.bg-SandyBrown {
+	background-color: SandyBrown;
+}
+
+.SeaGreen {
+	color: SeaGreen;
+}
+
+.bg-SeaGreen {
+	background-color: SeaGreen;
+}
+
+.SeaShell {
+	color: SeaShell;
+}
+
+.bg-SeaShell {
+	background-color: SeaShell;
+}
+
+.Sienna {
+	color: Sienna;
+}
+
+.bg-Sienna {
+	background-color: Sienna;
+}
+
+.Silver {
+	color: Silver;
+}
+
+.bg-Silver {
+	background-color: Silver;
+}
+
+.SkyBlue {
+	color: SkyBlue;
+}
+
+.bg-SkyBlue {
+	background-color: SkyBlue;
+}
+
+.SlateBlue {
+	color: SlateBlue;
+}
+
+.bg-SlateBlue {
+	background-color: SlateBlue;
+}
+
+.SlateGray {
+	color: SlateGray;
+}
+
+.bg-SlateGray {
+	background-color: SlateGray;
+}
+
+.SlateGrey {
+	color: SlateGrey;
+}
+
+.bg-SlateGrey {
+	background-color: SlateGrey;
+}
+
+.Snow {
+	color: Snow;
+}
+
+.bg-Snow {
+	background-color: Snow;
+}
+
+.SpringGreen {
+	color: SpringGreen;
+}
+
+.bg-SpringGreen {
+	background-color: SpringGreen;
+}
+
+.SteelBlue {
+	color: SteelBlue;
+}
+
+.bg-SteelBlue {
+	background-color: SteelBlue;
+}
+
+.Tan {
+	color: Tan;
+}
+
+.bg-Tan {
+	background-color: Tan;
+}
+
+.Teal {
+	color: Teal;
+}
+
+.bg-Teal {
+	background-color: Teal;
+}
+
+.Thistle {
+	color: Thistle;
+}
+
+.bg-Thistle {
+	background-color: Thistle;
+}
+
+.Tomato {
+	color: Tomato;
+}
+
+.bg-Tomato {
+	background-color: Tomato;
+}
+
+.Turquoise {
+	color: Turquoise;
+}
+
+.bg-Turquoise {
+	background-color: Turquoise;
+}
+
+.Violet {
+	color: Violet;
+}
+
+.bg-Violet {
+	background-color: Violet;
+}
+
+.Wheat {
+	color: Wheat;
+}
+
+.bg-Wheat {
+	background-color: Wheat;
+}
+
+.White {
+	color: White;
+}
+
+.bg-White {
+	background-color: White;
+}
+
+.WhiteSmoke {
+	color: WhiteSmoke;
+}
+
+.bg-WhiteSmoke {
+	background-color: WhiteSmoke;
+}
+
+.Yellow {
+	color: Yellow;
+}
+
+.bg-Yellow {
+	background-color: Yellow;
+}
+
+.YellowGreen {
+	color: YellowGreen;
+}
+
+.bg-YellowGreen {
+	background-color: YellowGreen;
+}
+
+@media screen and (max-width: 768px) {
+
+.m-wrap {
+	flex-wrap: wrap;
+}
+
+.m-no-wrap {
+	flex-wrap: nowrap;
+}
+
+.m-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.m-relative {
+	position: relative;
+}
+
+.m-absolute {
+	position: absolute;
+}
+
+.m-fixed {
+	position: fixed;
+}
+
+.m-flex-0 {
+	flex: 0;
+}
+
+.m-flex-1 {
+	flex: 1;
+}
+
+.m-flex-2 {
+	flex: 2;
+}
+
+.m-flex-3 {
+	flex: 3;
+}
+
+.m-flex-4 {
+	flex: 4;
+}
+
+.m-flex-5 {
+	flex: 5;
+}
+
+.m-span-1 {
+	width: 8.33333%;
+}
+
+.m-span-2 {
+	width: 16.66667%;
+}
+
+.m-span-3 {
+	width: 25%;
+}
+
+.m-span-4 {
+	width: 33.33333%;
+}
+
+.m-span-5 {
+	width: 41.66667%;
+}
+
+.m-span-6 {
+	width: 50%;
+}
+
+.m-span-7 {
+	width: 58.33333%;
+}
+
+.m-span-8 {
+	width: 66.66667%;
+}
+
+.m-span-9 {
+	width: 75%;
+}
+
+.m-span-10 {
+	width: 83.33333%;
+}
+
+.m-span-11 {
+	width: 91.66667%;
+}
+
+.m-span-12 {
+	width: 100%;
+}
+
+.m-row {
+	flex-direction: row;
+}
+
+.m-row.m-x-center {
+	justify-content: center;
+}
+
+.m-row.m-y-center {
+	align-items: center;
+}
+
+.m-row.m-x-end {
+	justify-content: flex-end;
+}
+
+.m-row.m-y-end {
+	align-items: flex-end;
+}
+
+.m-col {
+	flex-direction: column;
+}
+
+.m-col.m-x-center {
+	align-items: center;
+}
+
+.m-col.m-y-center {
+	justify-content: center;
+}
+
+.m-col.m-x-end {
+	align-items: flex-end;
+}
+
+.m-col.m-y-end {
+	justify-content: flex-end;
+}
+
+.m-centerify {
+	justify-content: center;
+	align-items: center;
+}
+
+.m-space-around {
+	justify-content: space-around;
+}
+
+.m-space-between {
+	justify-content: space-between;
+}
+
+.m-stretch {
+	align-items: stretch;
+}
+
+.m-text-left {
+	text-align: left;
+}
+
+.m-text-center {
+	text-align: center;
+}
+
+.m-text-right {
+	text-align: right;
+}
+
+.m-text-justify {
+	text-align: justify;
+}
+
+.m-text-uppercase {
+	text-transform: uppercase;
+}
+
+.m-text-lowercase {
+	text-transform: lowercase;
+}
+
+.m-text-capitalize {
+	text-transform: capitalize;
+}
+
+.m-hide,
+.desktop {
+	display: none;
+}
+
+}
+
+@keyframes top {
+
+from {
+	top: -300px;
+	opacity: 0;
+}
+
+to {
+	top: 0px;
+	opacity: 1;
+}
+
+}
+
+@keyframes right {
+
+from {
+	right: -300px;
+	opacity: 0;
+}
+
+to {
+	right: 0px;
+	opacity: 1;
+}
+
+}
+
+@keyframes left {
+
+from {
+	left: -300px;
+	opacity: 0;
+}
+
+to {
+	left: 0px;
+	opacity: 1;
+}
+
+}
+
+@keyframes bottom {
+
+from {
+	bottom: -300px;
+	opacity: 0;
+}
+
+to {
+	bottom: 0px;
+	opacity: 1;
+}
+
+}
+
+@keyframes opacity {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@keyframes zoom {
+
+from {
+	opacity: 0;
+	transform: scale(0);
+}
+
+to {
+	opacity: 1;
+	tranform: scale(1);
+}
+
+}
+

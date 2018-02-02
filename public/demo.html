@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/tesla.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="../dist/js/tesla.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<style>
+
+    * {
+        font-family: 'roboto';
+    }
+</style>
+<body class="">
+<div class='modal' style='display:none;'>
+    <img ts-close='.modal' class='animate-zoom span-10' src="instincts%20SUC-01.jpg"></img>
+    <!--
+            <div class="8p-8p modal-content">
+              <img class='modal-content' src="desktop-year-of-the-tiger-images-wallpaper.jpg"></img>
+            </div>
+    -->
+
+</div>
+<ts-loader>
+    <div class="modal">
+        <div class="moda-content">
+            Loading...
+        </div>
+    </div>
+</ts-loader>
+<header class="fluid bg-Teal White col">
+    <div></div>
+    <div class="fluid row space-between y-center">
+        <h3 class="8m-8m">Whatsapp</h3>
+        <div>
+            <i class=" 8p-8p fa fa-search"></i>
+            <i class="8p-8p fa fa-ellipsis-v"></i>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div ts-tab="#chats" class="8p-16p flex-1 text-uppercase">Chats</div>
+        <div ts-tab="#status" class="8p-16p flex-1 text-uppercase">status</div>
+        <div ts-tab="#calls" class="8p-16p flex-1 text-uppercase">calls</div>
+    </div>
+    <!--</div><div class="row text-center">-->
+    <!--<div ts-open="#chats" ts-close="#status,#calls" class="8p-16p flex-1 text-uppercase">Chats</div>-->
+    <!--<div ts-open="#status" ts-close="#chats,#calls" class="8p-16p flex-1 text-uppercase">status</div>-->
+    <!--<div ts-open="#calls" ts-close="#chats,#status" class="8p-16p flex-1 text-uppercase">calls</div>-->
+    <!--</div>-->
+</header>
+<article class="">
+    <div class="ts-tabs">
+        <div id="chats" class="fluid ts-tab">
+
+            <div class="col fluid">
+
+                <div class="row" style="border-bottom: 1px solid #eee;">
+                    <img ts-open=".modal" class="16m-16m" style="height:60px;width:60px;border-radius:50%;"
+                         src="instincts%20SUC-01.jpg"/>
+                    <div class="col y-center">
+                        <strong>Instincts 12</strong>
+                        <span>Hi we are on the way.</span>
+                    </div>
+                </div>
+
+                <div class="row" style="border-bottom: 1px solid #eee;">
+                    <img class="16m-16m" style="height:60px;width:60px;border-radius:50%;"
+                         src="desktop-year-of-the-tiger-images-wallpaper.jpg"/>
+                    <div class="col y-center">
+                        <strong>Gowtham</strong>
+                        <span class="Green">typing...</span>
+                    </div>
+                </div>
+
+                <div class="row" style="border-bottom: 1px solid #eee;">
+                    <img class="16m-16m" style="height:60px;width:60px;border-radius:50%;"
+                         src="instincts%20SUC-01.jpg"/>
+                    <div class="col y-center">
+                        <strong>Instincts 12</strong>
+                        <span>Hi we are on the way.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="status" class="hide ts-tab">
+            <p>Status tab</p>
+        </div>
+        <div id="calls" class="ts-tab hide">
+            <p>calltab</p>
+        </div>
+    </div>
+</article>
+</body>
+</html>

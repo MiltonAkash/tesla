@@ -1,0 +1,23 @@
+//Required $modal-background
+
+.modal {
+  @extend .fixed;
+  @extend .fluid;
+  //display:flex;
+  @extend .centerify;
+  z-index: 999;
+  //align-items: flex-start;
+
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: $modal-background;
+  //margin:auto;
+}
+
+.modal-content {
+  @extend .relative;
+  background-color: white;
+}
